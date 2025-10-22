@@ -1,6 +1,7 @@
 'use client';
 import { motion, LazyMotion, domAnimation } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function HeroSection() {
   return (
@@ -40,8 +41,15 @@ export default function HeroSection() {
             className="flex-1 flex justify-center"
           >
             <div className="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full flex items-center justify-center shadow-2xl hover-scale rainbow-border animate-float">
-              <div className="w-56 h-56 md:w-72 md:h-72 bg-white rounded-full flex items-center justify-center">
-                <span className="text-6xl">👨‍💻</span>
+              <div className="w-56 h-56 md:w-72 md:h-72 bg-white rounded-full flex items-center justify-center overflow-hidden">
+                <Image
+                  src="/fazli-photo.jpg" 
+                  alt="Muhammad Fazli"
+                  width={288} 
+                  height={288}
+                  className="w-full h-full object-cover"
+                  priority 
+                />
               </div>
             </div>
           </motion.div>

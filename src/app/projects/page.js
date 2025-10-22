@@ -1,15 +1,16 @@
 'use client';
 import { ExternalLink, Github } from 'lucide-react';
+import Image from 'next/image';
 
 const ProjectsPage = () => {
   const projects = [
     {
       title: "Website Portfolio",
       description: "A personal portfolio website showcasing my projects, skills, and experience.",
-      image: "/project1.jpg",
+      image: "/project1.png",
       technologies: ["Next.js", "PayloadCMS", "Vercel", "Supabase"],
-      liveUrl: "https://your-project1.demo",
-      github: "https://github.com/yourusername/project1",
+      liveUrl: "https://webp-sigma.vercel.app/",
+      github: "https://github.com/fazafazli/wp",
     },
   ];
 
@@ -28,11 +29,16 @@ const ProjectsPage = () => {
                 key={index}
                 className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover-lift"
               >
-                <div className="h-48 bg-gradient-to-br from-indigo-100 to-purple-100 relative flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-5xl mb-3">🚀</div>
-                    <p className="text-sm font-medium text-gray-600">Project Image</p>
-                  </div>
+                {/* Replace this section with Image component */}
+                <div className="h-48 relative bg-gray-100">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaUMk9jkHL0DcKqmaJ1d/altQuW6rC4ioWCQioyFbKkqwX0pSH//2Q=="
+                  />
                 </div>
 
                 <div className="p-8">
@@ -57,7 +63,7 @@ const ProjectsPage = () => {
                   <div className="flex justify-center space-x-6">
                     <a
                       href={project.liveUrl}
-                      target="https://webp-sigma.vercel.app/"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-3 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 font-medium transition-all hover-lift"
                     >
@@ -67,7 +73,7 @@ const ProjectsPage = () => {
 
                     <a
                       href={project.github}
-                      target="https://github.com/fazafazli/wp"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-3 px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-black font-medium transition-all hover-lift"
                     >
