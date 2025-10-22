@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  metadataBase: new URL('http://localhost:3000'),
+  metadataBase: new URL('https://webp-sigma.vercel.app/'),
   title: {
     default: 'fazafazli - website portfolio',
     template: '%s | fazafazli'

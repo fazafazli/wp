@@ -57,7 +57,7 @@ const ProjectsPage = () => {
                   <div className="flex justify-center space-x-6">
                     <a
                       href={project.liveUrl}
-                      target="_blank"
+                      target="https://webp-sigma.vercel.app/"
                       rel="noopener noreferrer"
                       className="flex items-center gap-3 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 font-medium transition-all hover-lift"
                     >
@@ -67,7 +67,7 @@ const ProjectsPage = () => {
 
                     <a
                       href={project.github}
-                      target="_blank"
+                      target="https://github.com/fazafazli/wp"
                       rel="noopener noreferrer"
                       className="flex items-center gap-3 px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-black font-medium transition-all hover-lift"
                     >
